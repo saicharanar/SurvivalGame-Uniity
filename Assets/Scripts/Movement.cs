@@ -19,8 +19,9 @@ public class Movement : MonoBehaviour
     {
         var aHorizontal = Input.GetAxis("Horizontal");
         var aVertical = Input.GetAxis("Vertical");
+        var playerMovement = new Vector3(aHorizontal, 0f, aVertical);
 
-        var playerMoment = new Vector3(aHorizontal, 0f, aVertical);
-        _controller.Move(playerMoment * playerSpeed * Time.deltaTime);
+        _controller.Move(playerMovement * playerSpeed * Time.deltaTime);
+        
     }
 }
