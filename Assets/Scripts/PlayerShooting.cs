@@ -21,7 +21,7 @@ public class PlayerShooting : MonoBehaviour
 
     void Fire()
     {
-        var bullet = (GameObject)Instantiate(BulletPrefab, BulletSpawn.position, BulletSpawn.rotation);
+        var bullet = Instantiate(BulletPrefab, BulletSpawn.position, BulletSpawn.rotation);
 
         // Add velocity to the bullet
         bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * 50;
