@@ -9,6 +9,7 @@ public class PlayerShooting : MonoBehaviour
 
     public float TimeBetweenShots = 0.3333f;
     private float _timeStamp = 0f;
+    [SerializeField] private GunController _gunController;
 
     void FixedUpdate ()
     {
@@ -21,12 +22,9 @@ public class PlayerShooting : MonoBehaviour
 
     void Fire()
     {
+        _gunController.FireWeapon();
         var bullet = Instantiate(BulletPrefab, BulletSpawn.position, BulletSpawn.rotation);
-
-        // Add velocity to the bullet
         bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * 50;
-
-        // Destroy the bullet after 2 seconds
         Destroy(bullet, 2.0f);
     }
 }
