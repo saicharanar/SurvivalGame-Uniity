@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class PlayerShooting : MonoBehaviour
 {
-    public GameObject BulletPrefab;
-    public Transform BulletSpawn;
+    [SerializeField] private GameObject BulletPrefab;
+    [SerializeField] private Transform BulletSpawn;
 
-    public float TimeBetweenShots = 0.3333f;
+    [SerializeField] private float TimeBetweenShots = 0.3333f;
     private float _timeStamp = 0f;
     [SerializeField] private GunController _gunController;
 

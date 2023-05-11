@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,9 +8,12 @@ public class FollowPlayer : MonoBehaviour
 {
     [SerializeField] private NavMeshAgent enemy;
     [SerializeField] private Transform player;
-    
 
-    // Update is called once per frame
+    private void Start()
+    {
+        player = GameObject.FindWithTag("Player").transform;
+    }
+
     void Update()
     {
         enemy.SetDestination(player.position);
