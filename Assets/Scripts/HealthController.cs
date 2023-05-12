@@ -12,7 +12,7 @@ public class HealthController : MonoBehaviour
     private float damage = 5f;
     private void Start()
     {
-        Debug.Log("script added");
+        
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -24,16 +24,16 @@ public class HealthController : MonoBehaviour
         }
     }
 
-    private void OnCollisionStay(Collision collisionInfo)
-    {
-        var isEnemy = collisionInfo.gameObject.tag.Equals("Enemy");
-        var damageable = Time.time >= _timeStamp;
-        
-        if(isEnemy && damageable)
-        {
-            healthBar.value -= damage;
-            _timeStamp = Time.time + TimeBetweenDamage;
-        }
-    }
+    // private void OnCollisionStay(Collision collisionInfo)
+    // {
+    //     var isEnemy = collisionInfo.gameObject.tag.Equals("Enemy");
+    //     var damageable = Time.time >= _timeStamp;
+    //     
+    //     if(isEnemy && damageable)
+    //     {
+    //         healthBar.value -= damage;
+    //         _timeStamp = Time.time + TimeBetweenDamage;
+    //     }
+    // }
     
 }

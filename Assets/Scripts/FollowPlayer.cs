@@ -17,5 +17,15 @@ public class FollowPlayer : MonoBehaviour
     void Update()
     {
         enemy.SetDestination(player.position);
+        StartCoroutine(AttackPlayerIfNear());
+    }
+
+    private IEnumerator AttackPlayerIfNear()
+    {
+        yield return new WaitForSeconds(1f);
+        if (enemy.remainingDistance < enemy.stoppingDistance)
+        {
+            gameObject.GetComponent<Animator>().SetTrigger("Attack");
+        }
     }
 }

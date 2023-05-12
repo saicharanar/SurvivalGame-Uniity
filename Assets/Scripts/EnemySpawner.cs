@@ -23,7 +23,8 @@ public class EnemySpawner : MonoBehaviour
     {
         SpawnPoints.ForEach((SpawnPoint =>
         {
-            Instantiate(EnemyPrefab, SpawnPoint.position, Quaternion.identity);
+            var enemy = Instantiate(EnemyPrefab, SpawnPoint.position, Quaternion.identity);
+            enemy.tag = "Enemy";
         } ));
     }
 }
