@@ -10,6 +10,7 @@ public class PlayerShooting : MonoBehaviour
     [SerializeField] private float TimeBetweenShots = 0.3333f;
     private float _timeStamp = 0f;
     [SerializeField] private GunController _gunController;
+    [SerializeField] private float BulletSpeed;
 
     void FixedUpdate ()
     {
@@ -24,7 +25,7 @@ public class PlayerShooting : MonoBehaviour
     {
         _gunController.FireWeapon();
         var bullet = Instantiate(BulletPrefab, BulletSpawn.position, BulletSpawn.rotation);
-        bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * 50;
+        bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * BulletSpeed;
         Destroy(bullet, 2.0f);
     }
 }

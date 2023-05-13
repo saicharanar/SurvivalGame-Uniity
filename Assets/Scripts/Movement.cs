@@ -6,6 +6,7 @@ public class Movement : MonoBehaviour
 {
 
     [SerializeField] public float playerSpeed = 10f;
+    [SerializeField] public Animator playerAnim;
     private CharacterController _controller;
     
     // Start is called before the first frame update
@@ -20,6 +21,16 @@ public class Movement : MonoBehaviour
         var aHorizontal = Input.GetAxis("Horizontal");
         var aVertical = Input.GetAxis("Vertical");
         var playerMovement = new Vector3(aHorizontal, 0f, aVertical);
+
+        var isMoving = playerMovement != Vector3.zero; 
+        if (isMoving)
+        {
+            playerAnim.SetFloat("Speed", 1f);
+        }
+        else
+        {
+            playerAnim.SetFloat("Speed", 0f);
+        }
 
         _controller.Move(playerMovement * playerSpeed * Time.deltaTime);
         
