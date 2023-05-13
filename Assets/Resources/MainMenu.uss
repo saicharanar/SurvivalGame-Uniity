@@ -1,0 +1,19 @@
+.button-menu {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    height: 57px;
+    width: 160px;
+    background-color: rgba(88, 88, 88, 0.59);
+    color: rgba(255, 255, 255, 255);
+    -unity-font-style: bold;
+    font-size: 16px;
+    -unity-font: none;
+}
+
+.button-menu:hover {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    height: 57px;
+    width: 160px;
+    background-color: rgba(88, 88, 88, 0.71);
+}
