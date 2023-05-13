@@ -1,0 +1,13 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Resources/MainMenu.uss?fileID=7433441132597879392&amp;guid=672d71334bdc94a498d613203ad04452&amp;type=3#MainMenu" />
+    <ui:VisualElement name="background" style="height: 561px; justify-content: center; align-items: center;">
+        <ui:VisualElement style="justify-content: center; align-items: center;">
+            <ui:GroupBox style="flex-direction: row; position: relative; bottom: 50px; color: rgb(250, 240, 240);">
+                <ui:Label text="Your Score :" display-tooltip-when-elided="true" name="ScoreText" class="label-menu" />
+                <ui:Label text="0" display-tooltip-when-elided="true" name="ScoreBox" class="label-menu" style="height: 38px; width: 83px;" />
+            </ui:GroupBox>
+            <ui:Button text="RETRY" display-tooltip-when-elided="true" name="Retry" class="button-menu" />
+            <ui:Button text="EXIT" display-tooltip-when-elided="true" name="Exit" class="button-menu" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

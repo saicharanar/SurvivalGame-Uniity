@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] private GameObject RestartButton;
+    // [SerializeField] private GameObject RestartButton;
+    [SerializeField] private TMP_Text Scorebox;
     private AudioSource[] allAudioSources;
 
     public void Awake() {
@@ -27,7 +29,9 @@ public class GameManager : MonoBehaviour
             Debug.Log("Ended");
             Time.timeScale = 0;
             StopAllAudio();
-            RestartButton.SetActive(true);
+            Score.currentScore = int.Parse(Scorebox.text);
+            SceneManager.LoadScene("EndScene");
+            // RestartButton.SetActive(true);
         }
     }
 }

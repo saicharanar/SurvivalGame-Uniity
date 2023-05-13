@@ -7295,7 +7295,7 @@ MonoBehaviour:
   - {fileID: 1312201682}
   - {fileID: 492150360}
   EnemyPrefab: {fileID: 7839069383691665282, guid: 37b973474d37844208079ed36465bc49, type: 3}
-  TimeBetweenSpawn: 8
+  TimeBetweenSpawn: 4
 --- !u!1001 &485795604
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10721,7 +10721,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 692239fdc68ba417cbc0a5f16d997f69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RestartButton: {fileID: 352010137}
+  Scorebox: {fileID: 550797898}
 --- !u!114 &1564390340
 MonoBehaviour:
   m_ObjectHideFlags: 0
