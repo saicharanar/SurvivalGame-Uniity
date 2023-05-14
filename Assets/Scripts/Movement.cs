@@ -25,7 +25,7 @@ public class Movement : MonoBehaviour
         var isMoving = playerMovement != Vector3.zero; 
         if (isMoving)
         {
-            playerAnim.SetFloat("Speed", 1f);
+            playerAnim.SetFloat("Speed", 0.5f);
         }
         else
         {
