@@ -15,11 +15,14 @@ public class PlayerShooting : MonoBehaviour
 
     void FixedUpdate ()
     {
-        if((Time.time >= _timeStamp) && (Input.GetKey(KeyCode.Mouse0)))
+        if((Time.time >= _timeStamp))
         {
-            Fire();
-            playerAnim.SetFloat("Speed", 1f);
-            _timeStamp = Time.time + TimeBetweenShots;
+            if ((Input.GetKey(KeyCode.Mouse0)) || (Input.GetKey(KeyCode.Space)))
+            {
+                Fire();
+                playerAnim.SetFloat("Speed", 1f);
+                _timeStamp = Time.time + TimeBetweenShots;
+            }
         }
     }
 
